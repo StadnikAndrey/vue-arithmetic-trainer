@@ -1,7 +1,7 @@
 <template>
 <div class="result">
-  <p class="result_text">Успешно: {{result.success}}</p>
-  <p class="result_text">Ошибки: {{result.error}}</p>
+  <p class="result_text">Верно: {{result.success}}</p>
+  <p class="result_text">Неверно: {{result.error}}</p>
   <hr>
   <button class="result_button" type="button" @click="btnClick">Продолжить</button>
 </div>     
