@@ -1,4 +1,4 @@
-# arithmetic_simulator
+# Arithmetic simulator on Vue.js
 
 ## Project setup
 ```
