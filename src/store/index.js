@@ -23,31 +23,31 @@ export default createStore({
     youResults: []
   },
   getters: {
-    operation(state){
+    operation(state) {
       return state.operation;
     },
-    range(state) {       
+    range(state) {
       return state.range;
     },
-    component(state){
+    component(state) {
       return state.component;
     },
-    operands(state){
+    operands(state) {
       return state.operands;
     },
-    operationTarget(state){
+    operationTarget(state) {
       return state.operationTarget;
     },
-    resultCalc(state){
+    resultCalc(state) {
       return state.resultCalc;
     },
-    result(state){
+    result(state) {
       return state.result;
     },
-    totalQuestions(state){
+    totalQuestions(state) {
       return state.totalQuestions;
     },
-    youResults(state){
+    youResults(state) {
       return state.youResults;
     }
   },
@@ -55,31 +55,31 @@ export default createStore({
     operation(state, data) {
       state.operation = data;
     },
-    range(state, data){
+    range(state, data) {
       if (data.hasOwnProperty('min')) {
         state.range.min = data.min;
       } else if (data.hasOwnProperty('max')) {
         state.range.max = data.max;
       }
     },
-    operands(state, data){
-      state.operands.one =  data.one;
-      state.operands.two =  data.two;
+    operands(state, data) {
+      state.operands.one = data.one;
+      state.operands.two = data.two;
     },
-    operationTarget(state, data){
+    operationTarget(state, data) {
       state.operationTarget = data;
     },
-    resultCalc(state, data){
+    resultCalc(state, data) {
       state.resultCalc = data;
     },
-    component(state, data){
+    component(state, data) {
       state.component = data;
     },
-    result(state, data){
+    result(state, data) {
       if (data == 'success') {
         state.result.success++;
         state.result.message = true;
-      }else if(data == 'error'){
+      } else if (data == 'error') {
         state.result.error++;
         state.result.message = false;
       }
@@ -89,34 +89,34 @@ export default createStore({
         state.result.message = true;
       }
     },
-    youResults(state, data){
+    youResults(state, data) {
       state.youResults.push(data);
     }
   },
   actions: {
-    operation({commit}, data) {
+    operation({ commit }, data) {
       commit('operation', data);
     },
-    range({commit}, data) {
-      commit('range', data);       
+    range({ commit }, data) {
+      commit('range', data);
     },
-    operands({commit}, data){
+    operands({ commit }, data) {
       commit('operands', data);
     },
-    operationTarget({commit}, data){
+    operationTarget({ commit }, data) {
       commit('operationTarget', data);
     },
-    resultCalc({commit}, data){
+    resultCalc({ commit }, data) {
       commit('resultCalc', data);
     },
-    component({commit}, data){
+    component({ commit }, data) {
       commit('component', data);
     },
     result({ commit }, data) {
       commit('result', data);
     },
-    youResults({commit}, data){
+    youResults({ commit }, data) {
       commit('youResults', data);
     }
-  }   
+  }
 })

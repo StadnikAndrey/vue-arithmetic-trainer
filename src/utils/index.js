@@ -1,14 +1,14 @@
-function randomInt(min, max){
+function randomInt(min, max) {
     let from = null;
     let to = null;
     if (min < max) {
         from = Math.ceil(min);
         to = Math.floor(max);
-    }else{
+    } else {
         from = Math.ceil(max);
         to = Math.floor(min);
-    }     
-    let int = Math.floor(Math.random() * (to - from + 1)) + from;     
+    }
+    let int = Math.floor(Math.random() * (to - from + 1)) + from;
     return int;
 }
 function randomFloat(min, max) {
@@ -26,4 +26,4 @@ function randomFloat(min, max) {
     Number.isInteger(float) ? res = float : res = float.toFixed(3);
     return res;
 }
-export default { randomInt, randomFloat};
+export default { randomInt, randomFloat };
