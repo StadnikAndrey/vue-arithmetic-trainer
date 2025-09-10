@@ -2,7 +2,7 @@
   <div class="wrap">    
     <div class="sidebar">            
         <section class="sidebar_section">
-          <h3 class="sidebar_section-title">Арифметические операции:</h3>
+          <h3 class="sidebar_section-title">Arithmetic operations:</h3>
           <form class="operations-form">
             <div class="form-row" v-for="(value, index) in operations" :key="index">
               <input class="form-row_input" type="radio" :value="value" name="op[]"
